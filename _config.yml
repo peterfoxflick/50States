@@ -1,0 +1,41 @@
+# Site Settings
+title: Peter Fox Flick
+author: Peter Flickinger
+description: > # this means to ignore newlines until "twitter_username:"
+  This Shows different states and allows people to select their own state.
+
+baseurl: "/"
+url: "/"
+name: "50 States Listing"
+
+# social links
+github_username:  peterfoxflick
+
+markdown: kramdown
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+collections:
+  states:
+    output: true
+    permalink: /state/:name
+  listings:
+    output: true
+    permalink: /:collection/:title
+
+
+
+
+
+#states : ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
+#states.each {|s|  File.open( s + ".md", "w") {|f| f.write("---\nlayout: state\nstate: " + s + "\n---\n " + s) } }
+
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    {%- include head.html -%}
+  </head>
+
+  <body>
+
+
+    {%- include nav.html -%}
+
+
+      {{ content }}
+
+
+    {%- include footer.html -%}
+
+
+
+    {% if page.state != null %}
+      <script language="javascript">
+        $('#nav-my-state').html('<li class="nav-item active"><a class="nav-link" href="{{ site.url  }}/state/{{ page.state }}.html">{{page.state}}<span class="sr-only">(current)</span></a></li>');
+      </script>
+    {% endif %}
+  </body>
+
+</html>

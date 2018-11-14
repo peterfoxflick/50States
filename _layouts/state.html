@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container">
+  <h1>{{ page.state }} Listings</h1>
+  <ul>
+  {% assign items_grouped = site.listings | group_by: 'state' %}
+      {% for group in items_grouped  %}
+       {% if group.name == page.state %}
+          {% for item in group.items %}
+              <p><h4><a href="{{item.url | relativize_url }}.html">{{item.title}}</a> <button type="button" class="btn btn-sm btn-outline-success">Subscribe</button></h4>
+<p>{{ item.content | truncate: 55 }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+  </ul>
+</div>

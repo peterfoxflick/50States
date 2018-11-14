@@ -1,0 +1,19 @@
+
+.top-space {
+	margin-top: 30px;
+}
+
+.bold-font {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
+	font-size: 7em;
+	color: #2d247a;
+}
+
+@media only screen and (max-width: 600px) {
+	.bold-font {
+		font-size: 5em;
+	}
+
+
+}

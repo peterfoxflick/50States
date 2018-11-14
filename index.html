@@ -1,0 +1,41 @@
+---
+layout: default
+navPage: home
+css: home
+---
+
+<!-- 		Large background                 -->
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col">
+        <h1 class="bold-font display-3 text-center">Which State do You Live in?</h1>
+        <p class="lead text-center">Some simple slogan  <a class="btn btn-primary" href="#satesListing" role="button">Get Started</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- 		Details                    -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Find My State</h1>
+    </div>
+  </div>
+
+  <div class="row" id="satesListing">
+    <div class="col-md-4">
+      {% assign count = 0 %}
+      {% for s in site.states %}
+        <a href="{{ s.url }}"><h2>{{ s.content }}</h2></a>
+        {% assign count = count | plus:1 %}
+        {% assign mod = count | modulo:17 %}
+          {% if mod == 0 %}
+            </div><div class="col-md-4">
+          {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

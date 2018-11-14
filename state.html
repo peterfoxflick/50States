@@ -1,0 +1,28 @@
+---
+layout: default
+navPage: state
+---
+
+<!-- 		Details                    -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Find My State</h1>
+    </div>
+  </div>
+
+  <div class="row" id="satesListing">
+    <div class="col-md-4">
+      {% assign count = 0 %}
+      {% for s in site.states %}
+        <a href="{{ s.url }}"><h2>{{ s.content }}</h2></a>
+        {% assign count = count | plus:1 %}
+        {% assign mod = count | modulo:17 %}
+          {% if mod == 0 %}
+            </div><div class="col-md-4">
+          {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
