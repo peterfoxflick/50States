@@ -8,7 +8,7 @@ layout: default
       {% for group in items_grouped  %}
        {% if group.name == page.state %}
           {% for item in group.items %}
-              <p><h4><a href="{{item.url | relativize_url }}.html">{{item.title}}</a> <button type="button" class="btn btn-sm btn-outline-success">Subscribe</button></h4>
+              <p><h4><a href="{{ site.baseurl }}{{ item.url }}">{{item.title}}</a> <button type="button" class="btn btn-sm btn-outline-success">Subscribe</button></h4>
 <p>{{ item.content | truncate: 55 }}</p>
           {% endfor %}
         {% endif %}

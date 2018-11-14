@@ -28,7 +28,7 @@ css: home
     <div class="col-md-4">
       {% assign count = 0 %}
       {% for s in site.states %}
-        <a href="{{ s.url }}"><h2>{{ s.content }}</h2></a>
+        <a href="{{ site.baseurl }}{{ s.url }}"><h2>{{ s.content }}</h2></a>
         {% assign count = count | plus:1 %}
         {% assign mod = count | modulo:17 %}
           {% if mod == 0 %}
