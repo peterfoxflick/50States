@@ -4,8 +4,8 @@ author: Peter Flickinger
 description: > # this means to ignore newlines until "twitter_username:"
   This Shows different states and allows people to select their own state.
 
-baseurl: "/50States/"
-url: "https://peterfoxflick.github.io/50States/"
+baseurl: "/50States"
+url: "https://peterfoxflick.github.io"
 name: "50 States Listing"
 
 # social links
