@@ -20,7 +20,7 @@
 
     {% if page.state != null %}
       <script language="javascript">
-        $('#nav-my-state').html('<li class="nav-item active"><a class="nav-link" href="{{ site.baseurl }}{{ site.url  }}/state/{{ page.state }}.html">{{page.state}}<span class="sr-only">(current)</span></a></li>');
+        $('#nav-my-state').html('<li class="nav-item active"><a class="nav-link" href="{{ site.baseurl }}/state/{{ page.state }}.html">{{page.state}}<span class="sr-only">(current)</span></a></li>');
       </script>
     {% endif %}
   </body>
